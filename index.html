@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades PHP</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            color: #222;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .actividades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .actividad {
+            background: white;
+            padding: 22px 15px;
+            text-align: center;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #e5e7eb;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+
+        .actividad:hover {
+            transform: translateY(-4px);
+            border-color: #2563eb;
+            color: #2563eb;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .numero {
+            display: block;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Actividades PHP</h1>
+            <p>Selecciona el punto que deseas consultar</p>
+        </header>
+
+        <section class="actividades">
+
+            <script>
+                for (let i = 1; i <= 26; i++) {
+                    document.write(`
+                        <a href="Punto${i}.php" class="actividad">
+                            <span class="numero">${i}</span>
+                            Punto ${i}
+                        </a>
+                    `);
+                }
+            </script>
+
+        </section>
+
+        <footer>
+            Proyecto de actividades en PHP
+        </footer>
+
+    </main>
+
+</body>
+</html>
